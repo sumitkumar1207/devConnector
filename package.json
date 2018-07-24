@@ -26,5 +26,13 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^10.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumitkumar1207/devConnector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumitkumar1207/devConnector/issues"
+  },
+  "homepage": "https://github.com/sumitkumar1207/devConnector#readme"
 }

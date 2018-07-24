@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import isEmpty from "../../validation/is-empty";
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 class ProfileAbout extends Component {
    render() {
@@ -37,5 +37,7 @@ class ProfileAbout extends Component {
     )
   }
 }
-
+ProfileAbout.propTypes ={
+  profile: PropTypes.object.isRequired
+}
 export default ProfileAbout;
