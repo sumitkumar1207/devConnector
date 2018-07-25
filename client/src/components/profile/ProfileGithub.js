@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
@@ -34,16 +33,13 @@ class ProfileGithub extends Component {
   }
   render() {
     const { repos } = this.state;
-  
+
     const repoItems = repos.map(repo => (
       <div key={repo.id} className=" card card-body mb-2">
         <div className="row">
           <div className="col-md-6">
             <h4>
-            <a href={repo.html_url}>{repo.name}</a>
-              {/* <Link to={repo.html_url} className="text-info" target="_blank">
-                {repo.name}
-              </Link> */}
+              <a href={repo.html_url}>{repo.name}</a>
             </h4>
             <p>{repo.description}</p>
           </div>

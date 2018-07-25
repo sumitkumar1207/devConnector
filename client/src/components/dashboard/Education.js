@@ -6,9 +6,9 @@ import { deleteEducation } from '../../actions/profileActions';
 
 class Education extends Component {
 
-    onDeleteClick(id) {
-        this.props.deleteEducation(id);
-    }
+  onDeleteClick(id) {
+    this.props.deleteEducation(id);
+  }
   render() {
     const education = this.props.education.map(edu => (
       <tr key={edu._id}>
@@ -19,8 +19,8 @@ class Education extends Component {
           -{edu.to === null ? (
             'Now'
           ) : (
-            <Moment format="DD/MM/YYYY">{edu.to}</Moment>
-          )}
+              <Moment format="DD/MM/YYYY">{edu.to}</Moment>
+            )}
         </td>
         <td>
           <button onClick={this.onDeleteClick.bind(this, edu._id)} className="btn btn-danger">Delete</button>
@@ -47,7 +47,7 @@ class Education extends Component {
 }
 
 deleteEducation.propTypes = {
-    deleteEducation: PropTypes.func.isRequired
+  deleteEducation: PropTypes.func.isRequired
 };
-  
-export default connect(null,{deleteEducation})(Education);
+
+export default connect(null, { deleteEducation })(Education);

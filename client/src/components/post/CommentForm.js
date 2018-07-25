@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { addComment} from '../../actions/postActions';
+import { addComment } from '../../actions/postActions';
 
 class CommentForm extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class CommentForm extends Component {
       name: user.name,
       avatar: user.avatar
     };
-    this.props.addComment(postId,newComment);
+    this.props.addComment(postId, newComment);
     this.setState({ text: '' });
   }
 

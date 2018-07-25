@@ -6,9 +6,9 @@ import { deleteExperience } from '../../actions/profileActions';
 
 class Experience extends Component {
 
-    onDeleteClick(id) {
-        this.props.deleteExperience(id);
-    }
+  onDeleteClick(id) {
+    this.props.deleteExperience(id);
+  }
   render() {
     const experience = this.props.experience.map(exp => (
       <tr key={exp._id}>
@@ -19,8 +19,8 @@ class Experience extends Component {
           -{exp.to === null ? (
             'Now'
           ) : (
-            <Moment format="DD/MM/YYYY">{exp.to}</Moment>
-          )}
+              <Moment format="DD/MM/YYYY">{exp.to}</Moment>
+            )}
         </td>
         <td>
           <button onClick={this.onDeleteClick.bind(this, exp._id)} className="btn btn-danger">Delete</button>
@@ -47,7 +47,7 @@ class Experience extends Component {
 }
 
 deleteExperience.propTypes = {
-    deleteExperience: PropTypes.func.isRequired
+  deleteExperience: PropTypes.func.isRequired
 };
-  
-export default connect(null,{deleteExperience})(Experience);
+
+export default connect(null, { deleteExperience })(Experience);

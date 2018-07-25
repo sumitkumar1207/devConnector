@@ -62,7 +62,7 @@ class PostItem extends Component {
                 </button>
               ) : null}
             </span>
-          ) : null}
+            ) : null}
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ class PostItem extends Component {
   }
 }
 
-PostItem.defaultProps= {
+PostItem.defaultProps = {
   showActions: true
 }
 PostItem.propTypes = {

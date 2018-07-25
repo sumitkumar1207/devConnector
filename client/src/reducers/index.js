@@ -7,7 +7,7 @@ import postReducer from './postReducer';
 
 export default combineReducers({
     auth: authReducer,
-    errors:errorReducer,
-    profile:profileReducer,
-    post:postReducer
+    errors: errorReducer,
+    profile: profileReducer,
+    post: postReducer
 });

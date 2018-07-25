@@ -118,7 +118,7 @@ export const removeLike = id => dispatch => {
 };
 
 //ADD Comment 
-export const addComment = (postId,commentData) => dispatch => {
+export const addComment = (postId, commentData) => dispatch => {
     dispatch(clearErrors());
     axios
         .post(`/api/posts/comment/${postId}`, commentData)
@@ -137,7 +137,7 @@ export const addComment = (postId,commentData) => dispatch => {
 };
 
 //Delete Comment 
-export const deleteComment = (postId,commentId) => dispatch => {
+export const deleteComment = (postId, commentId) => dispatch => {
     axios
         .delete(`/api/posts/comment/${postId}/${commentId}`)
         .then(res =>

@@ -33,7 +33,7 @@ class CreateProfile extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   componentDidMount() {
-      this.props.getCurrentProfile();
+    this.props.getCurrentProfile();
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
@@ -180,7 +180,7 @@ class CreateProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-            <Link to="/dashboard" className="btn btn-light">
+              <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
               <h1 className="display-4 text-center">Edit Your Profile</h1>

@@ -26,21 +26,21 @@ class AddEducation extends Component {
   }
 
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors});
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
   }
   onSubmit(e) {
     e.preventDefault();
     const eduData = {
-      school:this.state.school,
-      degree:this.state.degree,
-      fieldofstudy:this.state.fieldofstudy,
-      from:this.state.from,
-      to:this.state.to,
-      current:this.state.current,
-      description:this.state.description
+      school: this.state.school,
+      degree: this.state.degree,
+      fieldofstudy: this.state.fieldofstudy,
+      from: this.state.from,
+      to: this.state.to,
+      current: this.state.current,
+      description: this.state.description
     };
     this.props.addEducation(eduData, this.props.history);
   }
@@ -52,7 +52,7 @@ class AddEducation extends Component {
     this.setState({
       disabled: !this.state.disabled,
       current: !this.state.current
-      
+
     });
   }
   render() {
@@ -154,4 +154,4 @@ const mapStateToProps = state => ({
   profile: state.profile,
   errors: state.errors
 });
-export default connect(mapStateToProps,{addEducation})(withRouter(AddEducation));
+export default connect(mapStateToProps, { addEducation })(withRouter(AddEducation));

@@ -26,21 +26,21 @@ class AddExperience extends Component {
   }
 
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors});
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
   }
   onSubmit(e) {
     e.preventDefault();
     const expData = {
-      company:this.state.company,
-      title:this.state.title,
-      location:this.state.location,
-      from:this.state.from,
-      to:this.state.to,
-      current:this.state.current,
-      description:this.state.description
+      company: this.state.company,
+      title: this.state.title,
+      location: this.state.location,
+      from: this.state.from,
+      to: this.state.to,
+      current: this.state.current,
+      description: this.state.description
     };
     this.props.addExperience(expData, this.props.history);
   }
@@ -52,7 +52,7 @@ class AddExperience extends Component {
     this.setState({
       disabled: !this.state.disabled,
       current: !this.state.current
-      
+
     });
   }
   render() {
@@ -155,4 +155,4 @@ const mapStateToProps = state => ({
   profile: state.profile,
   errors: state.errors
 });
-export default connect(mapStateToProps,{addExperience})(withRouter(AddExperience));
+export default connect(mapStateToProps, { addExperience })(withRouter(AddExperience));

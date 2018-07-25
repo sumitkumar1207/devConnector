@@ -6,7 +6,7 @@ import TextFieldGroup from "../common/TextFieldGroup";
 // import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import InputGroup from "../common/InputGroup";
 import SelectListGroup from "../common/SelectListGroup";
-import {createProfile} from "../../actions/profileActions";
+import { createProfile } from "../../actions/profileActions";
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -31,9 +31,9 @@ class CreateProfile extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  componentWillReceiveProps(nextProps){
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors});
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
   }
   onSubmit(e) {
@@ -44,8 +44,8 @@ class CreateProfile extends Component {
       website: this.state.website,
       location: this.state.location,
       status: this.state.status,
-      skills:this.state.skills,
-      githubusername:this.state.githubusername,
+      skills: this.state.skills,
+      githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
@@ -60,50 +60,50 @@ class CreateProfile extends Component {
     console.log("submit");
   }
   render() {
-    const { errors,displaySocialInputs } = this.state;
+    const { errors, displaySocialInputs } = this.state;
     let socialInputs;
-    if(displaySocialInputs){
-      socialInputs =(
+    if (displaySocialInputs) {
+      socialInputs = (
         <div>
-          <InputGroup 
-          placeholder= "Twitter Profile URL"
-          name="twitter"
-          icon="fab fa-twitter"
-          value={this.state.twitter}
-          onChange={this.onChange}
-          error={errors.twitter}
+          <InputGroup
+            placeholder="Twitter Profile URL"
+            name="twitter"
+            icon="fab fa-twitter"
+            value={this.state.twitter}
+            onChange={this.onChange}
+            error={errors.twitter}
           />
-           <InputGroup 
-          placeholder= "Facebook Page URL"
-          name="facebook"
-          icon="fab fa-facebook"
-          value={this.state.facebook}
-          onChange={this.onChange}
-          error={errors.facebook}
+          <InputGroup
+            placeholder="Facebook Page URL"
+            name="facebook"
+            icon="fab fa-facebook"
+            value={this.state.facebook}
+            onChange={this.onChange}
+            error={errors.facebook}
           />
-          <InputGroup 
-          placeholder= "Linkedin Profile URL"
-          name="linkedin"
-          icon="fab fa-linkedin"
-          value={this.state.linkedin}
-          onChange={this.onChange}
-          error={errors.linkedin}
+          <InputGroup
+            placeholder="Linkedin Profile URL"
+            name="linkedin"
+            icon="fab fa-linkedin"
+            value={this.state.linkedin}
+            onChange={this.onChange}
+            error={errors.linkedin}
           />
-          <InputGroup 
-          placeholder= "YouTube Channel URL"
-          name="youtube"
-          icon="fab fa-youtube"
-          value={this.state.youtube}
-          onChange={this.onChange}
-          error={errors.youtube}
+          <InputGroup
+            placeholder="YouTube Channel URL"
+            name="youtube"
+            icon="fab fa-youtube"
+            value={this.state.youtube}
+            onChange={this.onChange}
+            error={errors.youtube}
           />
-          <InputGroup 
-          placeholder= "Instagram Page URL"
-          name="instagram"
-          icon="fab fa-instagram"
-          value={this.state.instagram}
-          onChange={this.onChange}
-          error={errors.instagram}
+          <InputGroup
+            placeholder="Instagram Page URL"
+            name="instagram"
+            icon="fab fa-instagram"
+            value={this.state.instagram}
+            onChange={this.onChange}
+            error={errors.instagram}
           />
         </div>
       )
@@ -200,7 +200,7 @@ class CreateProfile extends Component {
                 />
                 <div className="mb-3">
                   <button
-                  type="button"
+                    type="button"
                     onClick={() => {
                       this.setState(prevState => ({
                         displaySocialInputs: !prevState.displaySocialInputs
@@ -213,7 +213,7 @@ class CreateProfile extends Component {
                   <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
-                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4"/>
+                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
           </div>
@@ -230,4 +230,4 @@ const mapStateToProps = state => ({
   profile: state.profile,
   errors: state.errors
 });
-export default connect(mapStateToProps,{createProfile})(withRouter(CreateProfile));
+export default connect(mapStateToProps, { createProfile })(withRouter(CreateProfile));
